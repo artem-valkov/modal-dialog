@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <link href="css/nomralize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
 <meta charset="UTF-8">
 <title>validation-form</title>
 </head>
 <body>
-<div class="ModalPage">
+<div class="ModalPage" data-hide="backbg">
   <div class="ModalPage__openbtn">run popup</div>
   <div class="ModalPage__content hide">
-    <div class="ModalPage__content--cross" data-hide="cross"><img src="images/icon-popup-close.svg"></div>
-    <div class="ModalPage__content--warning"><img src="images/icon-warning_notify-red.svg"  class="svgs"> </div>
+    <div class="ModalPage__content--cross"><img src="images/icon-popup-close.svg" data-hide="cross" class="svg-cross"></div>
+    <div class="ModalPage__content--warning"><img src="images/icon-warning_notify-red.svg"  class="svg-warning"> </div>
     <div class="ModalPage__content--warningtext">Are you sure you want to uninstall the Shazam app</div>
     <btn class="ModalPage__content--cancel" data-hide="cancel">Cancel</btn>
     <btn class="ModalPage__content--uninstall">Uninstall</btn>

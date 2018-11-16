@@ -22,8 +22,7 @@
     "run-sequence": "^2.2.1"
   },
   "dependencies": {
-    "normalize.css": "^8.0.1",
-    "normalizecss": "^3.0.0",
+    "normalize.css": "^8.0.0",
     "sass": "^1.14.3"
   }
 }

@@ -1,4 +1,12 @@
-.svgs {
+@import url("https://fonts.googleapis.com/css?family=Archivo");
+* {
+  margin: 0;
+  padding: 0; }
+
+.svg-cross {
+  width: 6 vh; }
+
+.svg-warning {
   width: 35vh; }
 
 .ModalPage {
@@ -12,10 +20,10 @@
   .ModalPage__content {
     margin-top: 5vh;
     width: 110vh;
-    border: black 2px solid;
     height: 80vh;
-    border-radius: 20px;
+    border-radius: 2vh;
     background-color: white;
+    font-family: Archivo, sans-serif;
     display: grid;
     grid-template-columns: repeat(21, 1fr);
     grid-template-rows: repeat(20, 1fr);
@@ -36,19 +44,22 @@
     .ModalPage__content--cancel {
       border: gray 1px solid;
       grid-row: 16 / 18;
-      grid-column: 5 / 11;
+      grid-column: 3 / 11;
       border-radius: 1vh;
       text-align: center;
       padding-top: 2vh;
-      font-size: 3vh; }
+      font-size: 3vh;
+      color: gray; }
     .ModalPage__content--uninstall {
       border: gray 1px solid;
       grid-row: 16 / 18;
-      grid-column: 12 / 18;
+      grid-column: 12 / 20;
       border-radius: 1vh;
       text-align: center;
       padding-top: 2vh;
-      font-size: 3vh; }
+      font-size: 3vh;
+      background-color: red;
+      color: #ffffff; }
 
 .hide {
   display: none; }
