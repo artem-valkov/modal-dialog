@@ -15,8 +15,7 @@
   align-items: center;
   flex-direction: column; }
   .ModalPage__openbtn {
-    background-color: white;
-    border: 1px black solid; }
+    background-color: white; }
   .ModalPage__content {
     margin-top: 5vh;
     width: 110vh;
