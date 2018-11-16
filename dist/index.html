@@ -1,71 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>validation-form</title>
+  <link href="css/style.css" rel="stylesheet">
+<meta charset="UTF-8">
+<title>validation-form</title>
 </head>
 <body>
-<form name="validationForm" class="validationForm">
-<label>
-  <div>
-    <input type="text" class="first_name field">
-    <div class="any-error"></div>
+<div class="ModalPage">
+  <div class="ModalPage__openbtn">run popup</div>
+  <div class="ModalPage__content hide">
+    <div class="ModalPage__content--cross" data-hide="cross"><img src="images/icon-popup-close.svg"></div>
+    <div class="ModalPage__content--warning"><img src="images/icon-warning_notify-red.svg"  class="svgs"> </div>
+    <div class="ModalPage__content--warningtext">Are you sure you want to uninstall the Shazam app</div>
+    <btn class="ModalPage__content--cancel" data-hide="cancel">Cancel</btn>
+    <btn class="ModalPage__content--uninstall">Uninstall</btn>
   </div>
-</label>
-<label>Last name:
-  <div>
-    <input type="text" class="last_name field" />
-    <div class="any-error"></div>
-  </div>
-</label>
-<label>Date of birthday:
-  <div>
-    <input type="text"  name="date" class="date field" />
-    <div class="any-error"></div>
-  </div>
-</label>
-<label>Gender:
-  <div>
-    <input type="radio" name="male" class="male " value="male" />Male
-    <input type="radio" name="female" class="female" value="female" />Female
-  </div>
-</label>
-<label>Country
-  <div>
-    <select class="country field">
-      <option value="ukraine">Ukraine</option>
-      <option value="canada">Canada</option>
-      <option value="usa">Usa</option>
-    </select>
-  </div>
-</label>
-<label>Password
-  <div>
-  <input type="password" name="password" class="password field" />
-  </div>
-</label>
-<label>Confirm password
-  <div>
-    <input type="password" name="password_confirm" class="password_confirm field" />
-  </div>
-</label>
-<label>Email
-  <div>
-    <input type="text" name="email" class="email field"/>
-  </div>
-</label>
-<label> Address:
-  <div>
-    <input type="text" name="address" class="address field">
-  </div>
-</label>
-<label>Notes:
-  <div>
-    <textarea name="notes" cols="30" rows="10"></textarea>
-  </div>
-</label>
-<input type="submit" name="btn" class="btn" />
-</form>
-<script src="js/script1.js"></script>
+</div>
+<script src="js/script.js"></script>
 </body>
 </html>
