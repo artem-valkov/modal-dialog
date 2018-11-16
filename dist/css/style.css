@@ -4,7 +4,7 @@
   padding: 0; }
 
 .svg-cross {
-  width: 6 vh; }
+  width: 6vh; }
 
 .svg-warning {
   width: 35vh; }
@@ -38,9 +38,9 @@
       grid-column: 8 / 13; }
     .ModalPage__content--warningtext {
       grid-row: 12 / 15;
-      grid-column: 1 / 22;
+      grid-column: 2 / 21;
       text-align: center;
-      font-size: 6vh; }
+      font-size: 5vh; }
     .ModalPage__content--cancel {
       border: gray 1px solid;
       grid-row: 16 / 18;
