@@ -1,21 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Archivo");
-* {
-  margin: 0;
-  padding: 0; }
-
 .svg-cross {
   width: 6vh; }
 
-.svg-warning {
+.svg {
   width: 35vh; }
+
+.RunModal {
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  z-index: 1; }
 
 .ModalPage {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column; }
-  .ModalPage__openbtn {
-    background-color: white; }
+  flex-direction: column;
+  z-index: 10; }
   .ModalPage__content {
     margin-top: 5vh;
     width: 110vh;
@@ -27,20 +29,21 @@
     grid-template-columns: repeat(21, 1fr);
     grid-template-rows: repeat(20, 1fr);
     animation: showContent 1s; }
-    .ModalPage__content--cross {
+    .ModalPage__content .ModalPage__close {
       width: 10px;
       height: 20px;
       grid-column: 2   / 3;
-      grid-row: 2  / 3; }
-    .ModalPage__content--warning {
+      grid-row: 2  / 3;
+      cursor: pointer; }
+    .ModalPage__content .ModalPage__warning {
       grid-row: 4 / 7;
       grid-column: 8 / 13; }
-    .ModalPage__content--warningtext {
+    .ModalPage__content .ModalPage__contenttext {
       grid-row: 12 / 15;
       grid-column: 2 / 21;
       text-align: center;
       font-size: 5vh; }
-    .ModalPage__content--cancel {
+    .ModalPage__content .ModalPage__secondbtn {
       border: gray 1px solid;
       grid-row: 16 / 18;
       grid-column: 3 / 11;
@@ -48,8 +51,9 @@
       text-align: center;
       padding-top: 2vh;
       font-size: 3vh;
-      color: gray; }
-    .ModalPage__content--uninstall {
+      color: gray;
+      cursor: pointer; }
+    .ModalPage__content .ModalPage__redbtn {
       border: gray 1px solid;
       grid-row: 16 / 18;
       grid-column: 12 / 20;
@@ -58,14 +62,29 @@
       padding-top: 2vh;
       font-size: 3vh;
       background-color: red;
-      color: #ffffff; }
+      color: #ffffff;
+      cursor: pointer; }
+    .ModalPage__content .ModalPage__greenbtn {
+      border: gray 1px solid;
+      grid-row: 16 / 18;
+      grid-column: 12 / 20;
+      border-radius: 1vh;
+      text-align: center;
+      padding-top: 2vh;
+      font-size: 3vh;
+      background-color: green;
+      color: #ffffff;
+      cursor: pointer; }
 
 .hide {
   display: none; }
 
-.blackbg {
+.overlay {
   background-color: rgba(0, 0, 0, 0.5);
-  padding-bottom: 30vh; }
+  z-index: -5;
+  width: 100%;
+  height: 100%;
+  position: fixed; }
 
 @keyframes showContent {
   0% {
