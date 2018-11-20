@@ -4,6 +4,8 @@
   const primaryBtn = document.querySelectorAll('[data-primarybtn]');
   const secondaryBtn = document.querySelectorAll('[date-secondarybtn]');
 
+
+
   function contentShow(button) {
     button.addEventListener('click', (event) => {
       event.preventDefault();
