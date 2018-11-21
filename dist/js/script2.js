@@ -4,7 +4,6 @@
   const contentModal = document.querySelectorAll('[data-content]');
   const primaryBtn = document.querySelectorAll('[data-primarybtn]');
   const secondaryBtn = document.querySelectorAll('[data-secondarybtn]');
-  const mainImage = document.querySelectorAll('[data-image]');
   const overlay = document.createElement('div');
   overlay.className = 'overlay';
   const closeBtn = document.createElement('a');
@@ -14,7 +13,6 @@
   for (let m = 0; m < runModal.length; m++) {
     const modal = contentModal[m];
     const page = pageModal[m];
-    const run = runModal[m];
     const windowModal = function (modal, page) {
       modal.classList.remove('hide');
       page.appendChild(overlay);
@@ -26,16 +24,20 @@
     const closeModal = function (modal, page) {
       modal.classList.add('hide');
       page.removeChild(overlay);
+      modal.removeChild(closeBtn);
     };
     primaryBtn[m].addEventListener('click', () => {
       closeModal(modal, page);
-      (setTimeout("alert('hi')", 250));
+      setTimeout("alert('hi')", 250);
     });
     secondaryBtn[m].addEventListener('click', () => {
       closeModal(modal, page);
     });
     closeBtn.addEventListener('click', () => {
       closeModal(modal, page);
-    })
+    });
+    overlay.addEventListener('click', () => {
+      closeModal(modal, page);
+    });
   }
 }());
