@@ -1,4 +1,4 @@
-x$.fn.modals = function modal() {
+$.fn.modals = function modal() {
   const pageModal = document.querySelectorAll('[data-page]');
   const runModal = document.querySelectorAll('[data-run]');
   const contentModal = document.querySelectorAll('[data-content]');
