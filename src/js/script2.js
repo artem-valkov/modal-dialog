@@ -1,4 +1,4 @@
-(function () {
+x$.fn.modals = function modal() {
   const pageModal = document.querySelectorAll('[data-page]');
   const runModal = document.querySelectorAll('[data-run]');
   const contentModal = document.querySelectorAll('[data-content]');
@@ -13,19 +13,19 @@
   for (let m = 0; m < runModal.length; m++) {
     const modal = contentModal[m];
     const page = pageModal[m];
-    const windowModal = function (modal, page) {
+    function windowModal() {
       modal.classList.remove('hide');
       page.appendChild(overlay);
       modal.appendChild(closeBtn);
-    };
-    runModal[m].addEventListener('click', () => {
-      windowModal(modal, page);
-    });
-    const closeModal = function (modal, page) {
+    }
+    function closeModal() {
       modal.classList.add('hide');
       page.removeChild(overlay);
       modal.removeChild(closeBtn);
-    };
+    }
+    runModal[m].addEventListener('click', () => {
+      windowModal(modal, page);
+    });
     primaryBtn[m].addEventListener('click', () => {
       closeModal(modal, page);
       setTimeout("alert('hi')", 250);
@@ -40,4 +40,4 @@
       closeModal(modal, page);
     });
   }
-}());
+};
